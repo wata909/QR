@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/lib/jquery-3.1.1.min.js"></script>
+  <script src="js/lib/jquery.qrcode.js"></script>
+  <script src="js/lib/qrcode.js"></script>
+
+  <script src="js/list.js"></script>
+  <script src="js/main.js"></script>
+
+</head>
+
+<body>
+
+  <!-- <ons-navigator id="navigator" page="qr.html"></ons-navigator> -->
+
+<ons-page id="qr" >
+
+     <ons-toolbar>
+
+            <div class="center">
+              QRコード生成ツール 
+            </div>
+            <div class="right"><ons-button id="clear">clear</ons-button></div>
+
+     </ons-toolbar>
+  <div id="back"></div>
+  <div id="content">
+        
+    <div id="content1">
+    <div class = "leftBox">
+      <div class="ni">
+        <span class="inputname">対象作物<span></span></span><div class="inputBox" id="cropname"><input id="cropnameInput" class="input" disabled="disabled" placeholder="対象作物"></div>
+      </div>
+    </div>
+    <div class = "leftBox">
+      <div class="ni ni1">
+        <span class="inputname">試験機関<span></span></span><div class="inputBox" id="organization"><input id="orgInput" class="input" disabled="disabled" placeholder="試験機関"></div>
+      </div>
+      <div class="ni ni1">
+        <span class="inputname">試験ID<span></span></span><div class="inputBox" id="id"><input id="idInput" class="input input2"  placeholder="試験ID"></div>
+</div>
+      <div class="ni ni1">
+        <span class="inputname">対象部位<span></span></span><div class="inputBox sp" id="sp"><input id="spInput" class="input spInput" disabled="disabled" placeholder="対象部位"></div>
+      </div>
+      
+
+      <div class="ni">
+        <span class="inputname">環境<span></span></span><div class="inputBox" id="env"><input id="envInput" class="input envInput" disabled="disabled" placeholder="環境"></div>
+      </div>
+
+    </div>
+    <div class = "leftBox">
+      <div class="ni">
+        <span class="inputname">位置情報<span></span></span><ons-button id="getLocation">取得</ons-button>
+      </div>
+      </div>
+      <div class = "leftBox">
+      <div class="ni ni1">
+        <span class="inputname">緯度<span></span></span><div class="inputBox" id="lat"><input id="latInput" class="input input2"  placeholder="緯度"></div>
+      </div>
+      <div class="ni">
+        <span class="inputname">経度<span></span></span><div class="inputBox" id="lng"><input id="lngInput" class="input input2"  placeholder="経度"></div>
+      </div>
+      </div>
+
+    </div>
+   
+    <div id="content2">
+      
+        <div id="pd1" class="pd">
+        <div class="disName">病害虫1</div>
+        <div class="pdBox">
+        <div class = "leftBox">
+        <div class="ni">
+          <span class="inputname">区分<span></span></span><div class="inputBox pdc" id="pdc1"><input id="pdcInput1" class="input pdcInput" disabled="disabled" placeholder="病害虫区分"></div>
+        </div>
+        <div class="ni">
+          <span class="inputname">病害虫名<span></span></span><div class="inputBox pdn" id="pdn1"><input id="pdnInput1" class="input pdnInput" disabled="disabled" placeholder="病害虫名"></div>
+        </div>
+        <div class="ni">
+          <span class="inputname">同定区分<span></span></span><div class="inputBox pdi" id="pdi1"><input id="pdiInput1" class="input pdiInput" disabled="disabled" placeholder="同定区分"></div>
+        </div>
+        </div>
+
+          <div id="cdlr1" class="cdlr ni">
+
+            <span class="inputname">被害程度<span></span></span>
+            <div>
+                  <ons-radio class="radio" name="cdl1" input-id="cdl1_r0" value="0" ></ons-radio>
+                </div>
+                <label for="cdl1_r0" >0</label>
+
+              <div>
+                <ons-radio class="radio" name="cdl1" input-id="cdl1_r1" value="1" ></ons-radio>
+              </div>
+              <label for="cdl1_r1" >1</label>
+
+              <div>
+                <ons-radio class="radio" name="cdl1" input-id="cdl1_r2" value="2" ></ons-radio>
+              </div>
+              <label for="cdl1_r2" >2</label>
+
+              <div>
+                <ons-radio class="radio" name="cdl1" input-id="cdl1_r3" value="3" ></ons-radio>
+              </div>
+              <label for="cdl1_r3" >3</label>
+
+              </div>
+
+          <div class = "leftBox">
+          <div id="pbp1" class="pbp ni">
+
+                <label for="pbpCheck1" class="center inputname">
+                     <span class="inputname">虫体の有無<span></span></span>
+              </label>
+            <label class="left">
+                  <ons-checkbox class="pbpcheck" name="pbpCheck1" input-id="pbpCheck1" value="1"></ons-checkbox>
+                </label>
+            </div>
+
+            <div id="pbcb1" class="pbcb ni">
+              <span class="inputname">虫体区分<span></span></span><div class="inputBox pbc" id="pbc1"><input id="pbcInput1" class="input pbcInput" disabled="disabled" placeholder="虫体区分"></div>
+            </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="delete"><div id="deleteBtn">病害虫を削除する</div></div>
+  </div>
+
+        <ons-bottom-toolbar>
+          <div id="buttons">
+              <div class="footer_button" id="next">次を入力</div>
+              <div class="footer_button" id="getQR">QRコード生成</div>
+          </div>
+        </ons-bottom-tabbar> 
+
+</ons-page>
+  <ons-template id="chooselist.html">
+   <ons-dialog id="dialog"  var="dialog" cancelable >
+      <div class="chooseBox" style="max-height:520px;min-height:10px;overflow:auto;">
+      </div>
+   </ons-dialog>
+  </ons-template>
+
+</body>
+</html>

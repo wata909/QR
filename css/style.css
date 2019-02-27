@@ -1,0 +1,288 @@
+/*top*/
+
+.toolbar{
+    padding: 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+
+}
+
+.center{
+
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    
+}
+
+#clear{
+    float: right;
+    width: 75px;
+    height: 36px;
+    margin-right: 10px;
+    margin-top: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.leftBox{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.cdlr,.pbp,.pbcb{
+    display:none;
+}
+
+.ni{
+  height: 38px;
+  display: flex;  
+  align-items: center;
+  margin: 5px;
+}
+
+.ni1{
+    margin-right: 15px;
+}
+
+/**/
+.input{
+    pointer-events:none;
+    width: 86px;
+	border: solid 1px rgba(150,150,150,0.5);
+    box-shadow: 0px 0px 1px rgba(150,150,150,0.8);
+	background: white;
+	border-radius: 5px;
+	height: 30px;
+    font-size:12px;
+	color: black;
+    text-align: center;
+}
+
+.input2{
+    pointer-events: auto;
+}
+
+.envInput{
+    width: 120px;
+}
+
+#orgInput{
+    width: 120px;
+}
+
+.input::-webkit-input-placeholder{
+        color: rgb(160,160,160);
+}
+.input::-moz-placeholder{  
+        color: rgb(160,160,160); 
+}
+.input:-ms-input-placeholder{  
+        color: rgb(160,160,160);
+}
+
+.inputname{
+    width: 60px;
+    display: inline-block;
+    margin-right: 10px;
+    height: 34px;
+    color: #354443;
+    line-height: 34px;
+    font-size:12px;
+    font-weight: 600;
+    text-align:justify;
+}
+
+.inputname > span{
+    display: inline-block;
+    width: 100%;
+}
+
+#content{
+
+	width: 100%;
+    padding: 8px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box;
+}
+
+#back{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(255,255,255,1);
+    z-index: 1000;
+}
+
+#content1{
+    box-shadow: 0px 0px 4px rgba(150,150,150,0.8);
+    width: 100%;
+    padding: 15px 5px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box;
+    
+}
+
+#content2{
+	
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box;
+}
+
+.inputBox{
+	display: inline-block;
+}
+
+.pd{
+    margin-top: 10px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box;
+   
+}
+
+.pdBox{
+    padding:10px 5px;
+    box-shadow: 0px 0px 4px rgba(150,150,150,0.8);
+}
+
+.disName{
+    background: #0b78ab; 
+    font-size: 14px;
+    font-weight: bold;
+    width: 80px;
+    height: 34px;
+    border-radius: 2px;
+    color: white;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.pdnInput{
+    width: 200px;
+}
+
+.pdiInput{
+    width:120px;
+}
+
+.cdlr{
+    display: flex;
+    align-items: center;
+
+}
+
+.cdlr label{
+    display: inline-block;
+    width: 10px;
+    font-size: 13px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.pbp{
+    margin-right:15px;
+    height: 34px;
+}
+
+.radio-button--material__checkmark:before{
+ border: solid 1px rgba(150,150,150,0.5);
+ box-shadow: 0px 0px 1px rgba(150,150,150,0.8);
+}
+
+.checkbox__checkmark:before{
+border: solid 1px rgba(150,150,150,0.5);
+ box-shadow: 0px 0px 1px rgba(150,150,150,0.8);
+}
+
+#getLocation{
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0;
+    line-height:30px; 
+    background: #009688;
+    color: white;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+
+.bottom-bar{
+    height: 44px;
+    border-top: solid 1px rgb(180,180,180);
+}
+
+#buttons{
+
+    position:absolute;
+    bottom: 0px;
+    height: 44px;
+	background-color: rgb(255,255,255);
+	width: 100%;
+	font-size: 15px;
+    font-weight: 500;
+	color: rgb(139,147,157);
+	font-family: メイリオ,Microsoft YaHei,Meiryo,游明朝;
+    display: flex;
+
+}
+
+.footer_button{
+    box-sizing: border-box;
+    height: 26px;
+    margin-top: 9px;
+    color: rgb(30,30,30);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#next{
+
+    
+}
+
+#getQR{
+    border-left:solid 1px rgb(180,180,180);
+}
+
+#delete{
+    display: none;
+    float: right;
+    margin: 20px 0;
+}
+
+#deleteBtn{
+
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0;
+    line-height:30px; 
+    background: #d34839;
+    color: white;
+    font-size: 12px;
+    border-radius: 2px; 
+}
+
+.pd{
+    margin-top:20px;
+}
