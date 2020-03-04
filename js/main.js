@@ -11,7 +11,8 @@
 	  pdi = [],
 	  cdl = [],
 	  pbp = [],
-	  pbc = [];
+	  pbc = [],
+	  ispublic = true;
 
 
    var disNum = 1,
@@ -27,7 +28,6 @@
 	$(".pbcb").hide();
 
 	$("#pd1").show();
-
 
   	$("#cropname").click(function(){
   		//alert($("input[name='cdl1']:checked").val());
@@ -129,6 +129,14 @@
 
 	})
 
+	$(".ispublic").click(function(){
+		if ($(".ispubliccheck")[0].checked == true) {
+			ispublic = true;
+		}else{
+			ispublic = false;
+		}
+	})
+
 	$("#next").click(function(){
 
 		if(disNum>=5){
@@ -217,11 +225,13 @@ function clearAll(){
 		cdl = [],
 		pbp = [],
 		pbc = [];
+		ispublic = true;
 
 		disNum = 1;
 
   		$(".input").val("");
   		$(".pbpcheck")[0].checked = false;
+		$(".ispubliccheck")[0].checked = ispublic;
 
 
 	  	for(var f = 0 ;f < $("input:radio").length;f++){
@@ -312,6 +322,9 @@ function clearAll(){
 					for(var i=0;i<disNum;i++){
 						str += ","+pdc[i]+","+pdn[i]+","+pdi[i]+","+cdl[i]+","+pbp[i]+","+pbc[i];
 					}
+
+			str += ","+ispublic;
+
 			console.log(str);
             $("#back").show();
 			ons.createDialog('chooselist.html').then(function(dialog) {
@@ -324,7 +337,7 @@ function clearAll(){
 
 		}
 
-		console.log(crop,org,id,env,sp,lat,lng,pdc,pdn,pdi,cdl,pbp,pbc);
+		console.log(crop,org,id,env,sp,lat,lng,pdc,pdn,pdi,cdl,pbp,pbc,ispublic);
 
 	})
 
